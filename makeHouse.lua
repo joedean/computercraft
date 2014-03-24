@@ -1,4 +1,6 @@
-MAX_SLOT_NUMBER = 16
+-- Make House Script --
+local MAX_SLOT_NUMBER = 16
+
 local function placeBlock()
   if ( turtle.detectDown() ) then
     turtle.digDown()
@@ -129,5 +131,4 @@ local function createHouse(length, width, height)
   createDoor()
 end
 
-createHouse(6,6,6)
-
+createHouse(4,4,4)
