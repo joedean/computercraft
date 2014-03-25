@@ -30,7 +30,6 @@ local function turn(direction)
     turtle.turnRight()
   else
     print("Not a valid direction")
-    return
   end
 end
 
