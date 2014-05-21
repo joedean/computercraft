@@ -1,4 +1,4 @@
 computercraft
 =============
 
-ComputerCraft scripts for third CoderDojo session
+ComputerCraft scripts for CoderDojo sessions
