@@ -12,9 +12,9 @@ local function placeBlock()
       print ("No blocks to place!")
       return
     end
-    turtle.select(slotNum)    
+    turtle.select(slotNum)
   until turtle.placeDown()
-end 
+end
 
 local function placeBlockRow(length)
   for i=1, length do
@@ -50,7 +50,7 @@ function createFloor(length, width)
     turn(direction)
     turtle.forward()
     turn(direction)
-    turtle.back()  
+    turtle.back()
   end
   if ( direction == "left" ) then
     moveTurtleForward(length+1)
@@ -61,7 +61,7 @@ function createFloor(length, width)
   turtle.up()
   moveTurtleForward(width)
   turtle.down()
-  turtle.turnLeft()  
+  turtle.turnLeft()
 end
 
 local function calculateDistance(index, length, width)
