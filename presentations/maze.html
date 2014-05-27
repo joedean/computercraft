@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>CoderDojo Maze Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1> Turtle Maze </h1>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts</h3>
+      <h4> Variables </h4>
+      <ul>
+        <li> Variables store a changeable value </li>
+        <li> Meaningful variable names make code easier to read </li>
+      </ul>
+      <img src="images/variables.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts (Cont.)</h3>
+      <h4> Functions </h4>
+      <ul>
+        <li> Functions help simplify code, separating it by functionality and reducing repetitiveness. </li>
+        <li> Meaningful function names make code easier to read </li>
+      </ul>
+      <img src="images/functions.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts (Cont.)</h3>
+      <h4> Conditional ( If, Then, Else ) </h4>
+      <ul>
+        <li> If the condition is met then the block of code will run </li>
+        <li> If the condition is not met then the else block of code will run </li>
+        <li> If no else block in the condition and the condition is not met then the block of code in the condition will not run </li>
+      </ul>
+      <img src="images/conditional.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts (Cont.)</h3>
+      <h4> For Loop </h4>
+      <pre>
+for Variable = Start, End, Interval do
+  --Code to be looped over
+end</pre>
+      <ul>
+        <li> Variable = Number that will track where we are in the loop. Typically called 'i' or something appropriate to the script </li>
+        <li> Start = The number to indicate the start point for the loop. Typically will start at '1' </li>
+        <li> End = Then number the loop will count to.  How many times the loop will be run. </li>
+        <li> Interval = An optional argument that will specify how much to increment </li>
+      </ul>
+      <img src="images/for_loop.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts (Cont.)</h3>
+      <h4> While Loop </h4>
+      <ul>
+        <li> The While loop will continue looping until a certain condition is no longer met. </li>
+      </ul>
+      <img src="images/while_loop.png"/>
+
+      <h4> Modulo (%) </h4>
+      <ul>
+        <li>An operator that finds the remainder of division of one number by another</li>
+        <li> Examples: 6 % 5 = 1, 7 % 5 = 2, 8 % 5 = 3, 10 % 5 = 0, 11 % 5 = 1 </li>
+      </ul>
+      <img src="images/modulo.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Lua Programming Concepts (Cont.)</h3>
+      <h4>math.random</h4>
+      <ul>
+        <li>Math function that randomly picks a random number between the two provided numbers</li>
+        <li>Example: math.random(5,10) will randomly select either 5,6,7,8,9, or 10.</li>
+      </ul>
+
+      <h4>math.floor</h4>
+      <ul>
+        <li>Math function that drops the decimal and just provides the largest integer that is less than the original value.</li>
+        <li>Examples: math.floor(2.6) = 2, math.floor(2.5) = 2</li>
+      </ul>
+      <img src="images/random.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Insert Disk To Save Code Before Starting!</h2>
+      <img src="images/turtle.png"/>
+      <img src="images/disk.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Start coding!</h2>
+      <ul>
+        <li>Make sure you are creating the file in the disk directory!</li>
+        <li>If you want to edit from a better editor like textmate or note pad.  Then see appendix for details</li>
+      </ul>
+      <img src="images/edit_maze.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Maze Code</h2>
+      <h3> Utility Functions </h3>
+      <img src="images/utilities.png"/>
+    </section>
+
+    <section class="slide">
+      <h3> Stair Functions </h3>
+      <img src="images/stairs.png"/>
+    </section>
+
+    <section class="slide">
+      <h3> Maze Functions </h3>
+      <img src="images/maze.png"/>
+    </section>
+
+    <section class="slide">
+      <h3> Main Code </h3>
+      <img src="images/main.png"/>
+    </section>
+
+    <section class="slide">
+      <h2> Run Code To Create Maze </h2>
+      <ul>
+        <li> Copy code from the disk to the turtle </li>
+        <li> Change directory outside the disk to the copied code </li>
+        <li> Put 64 glowstones in the last slot as shown </li>
+        <li> Type the name of the file to run the code </li>
+      </ul>
+      <image src="images/run.png"/>
+      <p>
+        Note: If turtle does not run you need to set turtle needs fuel flag to false or refuel the turtle.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2> Resources </h2>
+      <ul>
+        <li> My email: joe.dean@gmail.com </li>
+        <li> My Twitter: @joeddean </li>
+        <li> Code: https://github.com/joedean/computercraft/blob/master/maze/maze.lua </li>
+        <li> Slides: http://www.simplecupofjoe.com/minecraft/maze.html</li>
+      </ul>
+      <h3>Thanks</h3>
+      <ul>
+        <li> on-site.com: @onsitedotcom </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix I</h2>
+      <h3>Remove the need for Fueling a Turtle</h3>
+      <img src="images/refuel.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix II</h2>
+      <h3>Edit Program Outside of Minecraft</h3>
+      <img src="images/outside_edit.png"/>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
