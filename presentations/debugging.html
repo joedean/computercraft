@@ -45,12 +45,12 @@
         <li> Error message tells you which line number in the code is most likely to have the error. </li>
         <li> Error message gives you a hint about what is the cuase of the error. </li>
         <ul>
-          <li>"attempt to call nil" error typically means calling a function that does not exist, usually a typo </ul>
-          <li> "'then' expected" Lua syntax error </ul>
+          <li>"attempt to call nil" error typically means calling a function that does not exist, usually a typo </li>
+          <li>"'then' expected" Lua syntax error </li>
         </ul>
       </ul>
-      <img src="images/lua_syntax_error.png"/>
       <img src="images/nil_error_msg.png"/>
+      <img src="images/lua_syntax_error.png"/>
     </section>
 
     <section class="slide">
@@ -76,7 +76,19 @@
 
      <section class="slide">
       <h3>Load Buggy Code on Disk</h3>
-      <img src="images/for_loop.png"/>
+      <ol>
+        <li>Go to https://github.com/joedean/computercraft/tree/master/bugs </li>
+        <li>Download buggy_pool.lua and buggy_stairs.lua scripts</li>
+        <li>Open Minecraft and go to "Edit Profile" and click "Open Game Dir"</li>
+        <li>Keeping game dir open with file manager enter into existing world or create a new world in creative mode</li>
+        <li>Craft a disk drive and an advanced turtle next to the disk drive</li>
+        <li>Right click on turtle and 'cd' into disk directory</li>
+        <li>Create a file called "foo" add text and save </li>
+        <li>Go back to file manager and search for the "foo" file</li>
+        <li>typically "foo" would be in $GAMEDIR/saves/$WORLDNAME/computer/disk/1 </li>
+        <li>Copy buggy_pool.lua and buggy_stairs.lua into same directory as FOO </li>
+        <li>Fix bugs in buggy_pool.lua first and then buggy_stairs.lua</li>
+      </ol>
     </section>
 
     <section class="slide">
