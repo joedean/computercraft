@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>CoderDojo Maze Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1> Debugging Turtles </h1>
+    </section>
+
+    <section class="slide">
+      <h3>Debugging Strategies</h3>
+      <h4>Read the Red Error</h4>
+      <ul>
+        <li> Error message tells you which line number in the code is most likely to have the error. </li>
+        <li> Error message gives you a hint about what is the cuase of the error. </li>
+        <ul>
+          <li> </ul>
+          <li> </ul>
+        </ul>
+      </ul>
+      <img src="images/error_message.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Debugging Strategies (cont.)</h3>
+      <h4>Print Method to Troubleshoot Bad Logic </h4>
+      <ul>
+        <li> Use print method to show the values of variables </li>
+        <li> Use print method to show the order of code execution </li>
+      </ul>
+      <img src="images/functions.png"/>
+    </section>
+
+    <section class="slide">
+      <h3>Debugging Strategies (cont.)</h3>
+      <h4>Execute Small Blocks of Code</h4>
+      <ul>
+        <li> Comment out code to execute small blocks to understand how the code functions </li>
+        <li> Test each method to make sure it works as expected (note: smaller methods makes for easier testing and troubleshooting) </li>
+      </ul>
+      <img src="images/conditional.png"/>
+    </section>
+
+     <section class="slide">
+      <h3>Load Buggy Code on Disk</h3>
+      <img src="images/for_loop.png"/>
+    </section>
+
+    <section class="slide">
+      <h2> Resources </h2>
+      <ul>
+        <li> My email: joe.dean@gmail.com </li>
+        <li> My Twitter: @joeddean </li>
+        <li> Code: http://joedean.github.io/computercraft </li>
+        <li> Slides: http://joedean.github.io/computercraft/presentations/maze.html</li>
+      </ul>
+      <h3>Thanks</h3>
+      <ul>
+        <li> on-site.com: @onsitedotcom </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix I</h2>
+      <h3>Remove the need for Fueling a Turtle</h3>
+      <img src="images/refuel.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix II</h2>
+      <h3>Edit Program Outside of Minecraft</h3>
+      <img src="images/outside_edit.png"/>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
