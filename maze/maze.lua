@@ -72,12 +72,8 @@ end
 
 -- dig up one stair
 local function digUpStair()
-  if turtle.detectUp() then
-    digUp(1)
-    turtle.digUp()
-  else
-    digUp(1)
-  end
+  digUp(1)
+  turtle.digUp()
   digForward(1)
 end
 
