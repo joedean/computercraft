@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>CoderDojo Maze Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1> Turtle MazeMap </h1>
+    </section>
+
+    <section class="slide">
+      <h2>Get the Code!</h2>
+      <ul>
+        <li> Start minecraft with computercraft Mod </li>
+        <li> Create disk drive with disk next to a mining turtle </li>
+        <li> Use pastebin utility as shown below (pastebin file = zfpTNVf5)</li>
+      </ul>
+      <img src="images/pastebin.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Use Preferred Text Editor</h2>
+      <h3>Open Code in an Editor of your choice</h3>
+      <ul>
+        <li> Use editor of choice.  For example, I'm using Sublime Text. </li>
+        <li> Navigate to the code on the disk outside minecraft, in the game directory, so your edits are updated right away when saved. </li>
+      </ul>
+      <img src="images/editcode.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Definititions</h2>
+      <h3>Broadcasting Turtle Location To The WEB</h3>
+      <h4>Broadcasting Protocol == HTTP</h4>
+      <h4>Broadcasting Domain == ? (TBD) </h4>
+      <h4>Broadcasting Port == 8000 </h4>
+      <p>
+        <ul>
+          <li> <strong>Protocol:</strong> A set of rules used in programming computers so that they can communicate with each other. </li>
+          <li> <strong>HTTP (HyperText Transfer Protocol):</strong> Protocol used for exchanging files on the web.  (Note: Your browser is an HTTP client that sends requests to web servers) </li>
+          <li> <strong>Domain:</strong> Address of a computer, organization, or other entity on the Internet. </li>
+          <li> <strong>Port: </strong> Where the computer listens for messages coming in and sends messages going out.  Default port for the internet is port 80 or 443 for encrypted content</li>
+        </ul>
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Global Variables</h2>
+      <h3>Add Global Constants for Communication Protocol</h3>
+      <ul>
+        <li> <strong>Array</strong> - A list of values referenced by an number starting with 1.  Note: Most programming languages start counting at 0, not Lua!</li>
+        <li> <strong>Global Variables</strong> - Can be used throughout the program.  We are using it to keep track of the directional position of the turtle so we know what direction to move the turtle on the map.</li>
+      </ul>
+      <img src="images/globals.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Broadcast</h2>
+      <h3>Utility Functions Required for Broadcasting Turtle's Direction</h3>
+      <ul>
+        <li> <strong>httpPost function</strong> - Uses the existing http api to post the information required to broadcast. </li>
+        <li> <strong>broadcast function</strong> - Broadcasts movement to the internet using httpPost function. </li>
+        <li> <strong>turnRight function</strong> - turns the turtle and keeps track of the turtles direction using the direction_index variable. </li>
+      </ul>
+      <img src="images/httputils.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Coding Challenge!</h2>
+      <h3>Where to call the "broadcast" function?</h3>
+      <img src="images/question.jpg"/>
+      <div>
+        When you figure it out let me know if you want to test your turtle on my server?
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2> Resources </h2>
+      <ul>
+        <li> My email: joe.dean@gmail.com </li>
+        <li> My Twitter: @joeddean </li>
+        <li> Code: http://joedean.github.io/computercraft </li>
+        <li> Slides: http://joedean.github.io/computercraft/presentations/mazemap.html</li>
+      </ul>
+      <h3>Thanks</h3>
+      <ul>
+        <li> on-site.com: @onsitedotcom </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix I</h2>
+      <h3>Remove the need for Fueling a Turtle</h3>
+      <img src="images/refuel.png"/>
+    </section>
+
+    <section class="slide">
+      <h2>Appendix II</h2>
+      <h3>Edit Program Outside of Minecraft</h3>
+      <img src="images/outside_edit.png"/>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
